@@ -26,6 +26,14 @@ const sections = [
     count: "200 categorias",
   },
   {
+    title: "Verbos",
+    description: "Consulte os verbos mais usados e veja como flexionam nos tempos verbais.",
+    href: "/verbos",
+    icon: "🔤",
+    gradient: "gradient-card-purple",
+    count: "100 verbos",
+  },
+  {
     title: "Exercícios",
     description: "Pratique com quizzes, complete frases e ordene palavras para fixar o conteúdo.",
     href: "/exercicios",
@@ -56,7 +64,7 @@ export default function Home() {
             Um empurrãozinho a mais<br />da Teacher Rafa!
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            800+ conteúdos entre lições, gramática, vocabulário e exercícios interativos — tudo em um lugar só!
+            900+ conteúdos entre lições, gramática, vocabulário, verbos e exercícios interativos — tudo em um lugar só!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -77,11 +85,12 @@ export default function Home() {
 
       {/* Stats */}
       <section className="max-w-5xl mx-auto px-4 -mt-8 relative z-20">
-        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 grid grid-cols-2 md:grid-cols-5 gap-6">
           {[
             { number: "200", label: "Lições", color: "text-primary" },
             { number: "200", label: "Gramática", color: "text-secondary" },
             { number: "200", label: "Vocabulário", color: "text-accent-dark" },
+            { number: "100", label: "Verbos", color: "text-primary-light" },
             { number: "200", label: "Exercícios", color: "text-teal-dark" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
@@ -98,7 +107,7 @@ export default function Home() {
           O que você vai encontrar
         </h2>
         <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
-          Quatro áreas completas para você estudar inglês no seu ritmo.
+          Cinco áreas completas para você estudar inglês no seu ritmo.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sections.map((section) => (
