@@ -35,6 +35,11 @@ const navSections = [
     ],
   },
   {
+    label: "Verbos",
+    href: "/verbos",
+    items: [],
+  },
+  {
     label: "Exercícios",
     href: "/exercicios",
     items: [
@@ -80,17 +85,19 @@ export default function Header() {
                 >
                   {section.label}
                 </Link>
-                <button
-                  onClick={() => setOpenDropdown(openDropdown === section.label ? null : section.label)}
-                  className="p-1 rounded hover:bg-white/15 transition-colors"
-                  aria-label={`Submenu ${section.label}`}
-                >
-                  <svg className={`w-3.5 h-3.5 transition-transform ${openDropdown === section.label ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                {section.items.length > 0 && (
+                  <button
+                    onClick={() => setOpenDropdown(openDropdown === section.label ? null : section.label)}
+                    className="p-1 rounded hover:bg-white/15 transition-colors"
+                    aria-label={`Submenu ${section.label}`}
+                  >
+                    <svg className={`w-3.5 h-3.5 transition-transform ${openDropdown === section.label ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                )}
               </div>
-              {openDropdown === section.label && (
+              {section.items.length > 0 && openDropdown === section.label && (
                 <div className="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl border border-gray-100 py-2 min-w-[200px] z-50">
                   <Link
                     href={section.href}
@@ -144,18 +151,20 @@ export default function Header() {
               >
                 {section.label}
               </Link>
-              <div className="pl-6 space-y-0.5">
-                {section.items.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block py-1.5 px-3 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded transition-colors"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+              {section.items.length > 0 && (
+                <div className="pl-6 space-y-0.5">
+                  {section.items.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block py-1.5 px-3 text-sm text-white/70 hover:text-white hover:bg-white/5 rounded transition-colors"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </nav>
