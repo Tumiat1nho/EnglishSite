@@ -710,9 +710,7 @@ São usados como complemento do verbo ou após preposições.
           wrong: "I didn't went to school.",
           correct: "I didn't go to school.",
           explanation:
-codex/review-project-lhk4ky,
             "Após didn't, o verbo volta à forma base (go), sem passado.",
-main
         },
         {
           wrong: "Did she went there?",
@@ -1071,9 +1069,7 @@ Também é possível inverter:
           wrong: "If he doesn't comes, we'll start.",
           correct: "If he doesn't come, we'll start.",
           explanation:
-codex/review-project-lhk4ky,
             "Após doesn't, o verbo fica na forma base.",
- main
         },
       ],
       tip: 'Dica prática: lembre “if + presente, will + futuro”. Não coloque “will” na parte do if.',
