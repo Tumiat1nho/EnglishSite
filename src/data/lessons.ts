@@ -469,4 +469,976 @@ export const lessons: Lesson[] = [
       },
     },
   },
+  // ──────────────────────────────────────────────
+  // LESSON 5 — Numbers & Time (A1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "numbers-and-time",
+    title: "Números e Horas",
+    description:
+      "Aprenda a dizer números, horários e perguntar as horas em inglês.",
+    level: "A1",
+    icon: "⏰",
+    content: {
+      introduction:
+        "Saber dizer números e horários é essencial para o dia a dia. Nesta lição, você vai aprender a perguntar as horas, dizer horários comuns e usar números em situações simples como telefone e agenda.",
+      dialogue: [
+        {
+          speaker: "Julia",
+          english: "Excuse me, what time is it?",
+          portuguese: "Com licença, que horas são?",
+        },
+        {
+          speaker: "Mark",
+          english: "It's three fifteen.",
+          portuguese: "São três e quinze.",
+        },
+        {
+          speaker: "Julia",
+          english: "Thanks! My class starts at three thirty.",
+          portuguese: "Obrigada! Minha aula começa às três e meia.",
+        },
+        {
+          speaker: "Mark",
+          english: "No problem. See you at four!",
+          portuguese: "Sem problema. Até às quatro!",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "What time is it?",
+          portuguese: "Que horas são?",
+          phonetic: "/wɒt taɪm ɪz ɪt/",
+          example: "What time is it? — It's two o'clock.",
+        },
+        {
+          english: "Half past",
+          portuguese: "Meia (hora)",
+          phonetic: "/hɑːf pæst/",
+          example: "It's half past six.",
+        },
+        {
+          english: "Quarter past",
+          portuguese: "Quinze (minutos)",
+          phonetic: "/ˈkwɔːrtər pæst/",
+          example: "It's quarter past nine.",
+        },
+        {
+          english: "O'clock",
+          portuguese: "Em ponto",
+          phonetic: "/əˈklɒk/",
+          example: "It's eight o'clock.",
+        },
+        {
+          english: "Schedule",
+          portuguese: "Agenda / Horário",
+          phonetic: "/ˈskedʒuːl/",
+          example: "My schedule is busy today.",
+        },
+      ],
+      grammarTip: {
+        title: "Como dizer horas em inglês",
+        explanation:
+          "Para dizer as horas em inglês, usamos \"It's\" + a hora: \"It's five\" (são cinco). Para horas em ponto, usamos \"o'clock\": \"It's seven o'clock\". Para minutos, podemos dizer \"It's three fifteen\" (3:15) ou usar expressões como \"quarter past\" (15 minutos) e \"half past\" (30 minutos).",
+      },
+      miniExercise: {
+        question: "Como dizer 7:30 em inglês?",
+        options: [
+          "It's seven and thirty.",
+          "It's half past seven.",
+          "It's seven quarter.",
+          "It's seven past.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "A forma correta e mais natural é \"It's half past seven\". Também é comum dizer \"It's seven thirty\", mas \"half past\" é a expressão clássica para 7:30.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 6 — Daily Routine (A1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "daily-routine-a1",
+    title: "Rotina Diária",
+    description:
+      "Aprenda verbos básicos para falar da sua rotina diária em inglês.",
+    level: "A1",
+    icon: "📅",
+    content: {
+      introduction:
+        "Falar sobre sua rotina é uma conversa muito comum. Nesta lição, você vai aprender verbos simples como acordar, trabalhar, estudar e dormir, além de expressões básicas de frequência.",
+      dialogue: [
+        {
+          speaker: "Ana",
+          english: "What time do you wake up?",
+          portuguese: "Que horas você acorda?",
+        },
+        {
+          speaker: "Bruno",
+          english: "I wake up at six and go to work at seven.",
+          portuguese: "Eu acordo às seis e vou trabalhar às sete.",
+        },
+        {
+          speaker: "Ana",
+          english: "Do you have lunch at home?",
+          portuguese: "Você almoça em casa?",
+        },
+        {
+          speaker: "Bruno",
+          english: "Yes, I have lunch at noon.",
+          portuguese: "Sim, eu almoço ao meio-dia.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Wake up",
+          portuguese: "Acordar",
+          phonetic: "/weɪk ʌp/",
+          example: "I wake up early.",
+        },
+        {
+          english: "Go to work",
+          portuguese: "Ir para o trabalho",
+          phonetic: "/ɡoʊ tə wɜːrk/",
+          example: "I go to work by bus.",
+        },
+        {
+          english: "Have lunch",
+          portuguese: "Almoçar",
+          phonetic: "/hæv lʌntʃ/",
+          example: "We have lunch at noon.",
+        },
+        {
+          english: "Study",
+          portuguese: "Estudar",
+          phonetic: "/ˈstʌdi/",
+          example: "I study English every day.",
+        },
+        {
+          english: "Go to bed",
+          portuguese: "Ir dormir",
+          phonetic: "/ɡoʊ tə bɛd/",
+          example: "I go to bed at ten.",
+        },
+      ],
+      grammarTip: {
+        title: "Presente simples para hábitos",
+        explanation:
+          "Usamos o presente simples para falar de hábitos: \"I wake up at six\" (Eu acordo às seis). Com he/she/it, adicionamos -s: \"She wakes up early\". Para perguntas, usamos \"Do\" ou \"Does\": \"Do you study?\" / \"Does he work?\".",
+      },
+      miniExercise: {
+        question: "Complete: \"She ___ to work at 8.\"",
+        options: ["go", "goes", "going", "went"],
+        correctIndex: 1,
+        explanation:
+          "Com \"she\", o verbo recebe -es: \"She goes to work at 8.\" No presente simples, usamos -s/-es na terceira pessoa.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 7 — Weather (A1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "weather-a1",
+    title: "Clima e Tempo",
+    description:
+      "Aprenda a falar sobre o clima e o tempo em inglês com frases simples.",
+    level: "A1",
+    icon: "☀️",
+    content: {
+      introduction:
+        "O clima é assunto comum em qualquer conversa. Nesta lição, você vai aprender palavras básicas para falar sobre sol, chuva, frio e calor.",
+      dialogue: [
+        {
+          speaker: "Sara",
+          english: "How's the weather today?",
+          portuguese: "Como está o tempo hoje?",
+        },
+        {
+          speaker: "Paul",
+          english: "It's sunny and warm.",
+          portuguese: "Está ensolarado e quente.",
+        },
+        {
+          speaker: "Sara",
+          english: "Great! Let's go to the park.",
+          portuguese: "Ótimo! Vamos ao parque.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Sunny",
+          portuguese: "Ensolarado",
+          phonetic: "/ˈsʌni/",
+          example: "It's sunny today.",
+        },
+        {
+          english: "Rainy",
+          portuguese: "Chuvoso",
+          phonetic: "/ˈreɪni/",
+          example: "It's rainy this morning.",
+        },
+        {
+          english: "Cold",
+          portuguese: "Frio",
+          phonetic: "/koʊld/",
+          example: "It's cold at night.",
+        },
+        {
+          english: "Hot",
+          portuguese: "Quente",
+          phonetic: "/hɒt/",
+          example: "It's hot in the afternoon.",
+        },
+        {
+          english: "Cloudy",
+          portuguese: "Nublado",
+          phonetic: "/ˈklaʊdi/",
+          example: "It's cloudy today.",
+        },
+      ],
+      grammarTip: {
+        title: "Usando \"It's\" para falar do clima",
+        explanation:
+          "Em inglês, falamos do clima com \"It's\" + adjetivo: \"It's sunny\" (Está ensolarado), \"It's cold\" (Está frio). Para perguntar, usamos \"How's the weather?\".",
+      },
+      miniExercise: {
+        question: "Qual frase está correta?",
+        options: [
+          "Is sunny today.",
+          "It's sunny today.",
+          "It's sun today.",
+          "Sunny is today.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "A forma correta é \"It's sunny today\". Sempre usamos \"It's\" antes do adjetivo de clima.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 8 — At the Airport (A2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "at-the-airport",
+    title: "No Aeroporto",
+    description:
+      "Aprenda frases úteis para check-in, embarque e imigração em inglês.",
+    level: "A2",
+    icon: "✈️",
+    content: {
+      introduction:
+        "Viajar de avião exige vocabulário específico. Nesta lição, você vai aprender a fazer check-in, perguntar sobre portões de embarque e entender instruções comuns no aeroporto.",
+      dialogue: [
+        {
+          speaker: "Agent",
+          english: "Good morning. May I see your passport?",
+          portuguese: "Bom dia. Posso ver seu passaporte?",
+        },
+        {
+          speaker: "Passenger",
+          english: "Here it is. I have one checked bag.",
+          portuguese: "Aqui está. Eu tenho uma mala para despachar.",
+        },
+        {
+          speaker: "Agent",
+          english: "Your gate is B12. Boarding starts at 10:30.",
+          portuguese: "Seu portão é B12. O embarque começa às 10:30.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Passport",
+          portuguese: "Passaporte",
+          phonetic: "/ˈpæspɔːrt/",
+          example: "May I see your passport?",
+        },
+        {
+          english: "Boarding pass",
+          portuguese: "Cartão de embarque",
+          phonetic: "/ˈbɔːrdɪŋ pæs/",
+          example: "Here's my boarding pass.",
+        },
+        {
+          english: "Gate",
+          portuguese: "Portão",
+          phonetic: "/ɡeɪt/",
+          example: "The gate is B12.",
+        },
+        {
+          english: "Checked bag",
+          portuguese: "Bagagem despachada",
+          phonetic: "/tʃɛkt bæɡ/",
+          example: "I have one checked bag.",
+        },
+        {
+          english: "Boarding",
+          portuguese: "Embarque",
+          phonetic: "/ˈbɔːrdɪŋ/",
+          example: "Boarding starts at 10:30.",
+        },
+      ],
+      grammarTip: {
+        title: "Perguntas educadas no aeroporto",
+        explanation:
+          "Para pedir informações de forma educada, use \"May I…?\" ou \"Could you…?\": \"May I see your passport?\" (Posso ver seu passaporte?) e \"Could you tell me my gate?\" (Você poderia me dizer meu portão?).",
+      },
+      miniExercise: {
+        question: "Como perguntar \"Qual é o meu portão?\" em inglês?",
+        options: [
+          "Where is my gate?",
+          "What is my gate?",
+          "How is my gate?",
+          "Which gate I am?",
+        ],
+        correctIndex: 0,
+        explanation:
+          "A forma correta é \"Where is my gate?\". Também é comum dizer \"What gate is it?\".",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 9 — Making Plans (A2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "making-plans-a2",
+    title: "Fazendo Planos",
+    description:
+      "Aprenda a fazer convites, aceitar e recusar planos em inglês.",
+    level: "A2",
+    icon: "📅",
+    content: {
+      introduction:
+        "Combinar programas é parte do dia a dia. Nesta lição, você vai aprender expressões para convidar alguém e responder de forma educada.",
+      dialogue: [
+        {
+          speaker: "Leo",
+          english: "Do you want to go to the movies on Friday?",
+          portuguese: "Você quer ir ao cinema na sexta?",
+        },
+        {
+          speaker: "Marina",
+          english: "I'd love to, but I have to work.",
+          portuguese: "Eu adoraria, mas tenho que trabalhar.",
+        },
+        {
+          speaker: "Leo",
+          english: "No problem. How about Saturday?",
+          portuguese: "Sem problema. E sábado?",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Do you want to...?",
+          portuguese: "Você quer...?",
+          phonetic: "/duː juː wɒnt tuː/",
+          example: "Do you want to have coffee?",
+        },
+        {
+          english: "I'd love to",
+          portuguese: "Eu adoraria",
+          phonetic: "/aɪd lʌv tuː/",
+          example: "I'd love to go.",
+        },
+        {
+          english: "How about...?",
+          portuguese: "E...?",
+          phonetic: "/haʊ əˈbaʊt/",
+          example: "How about Saturday?",
+        },
+        {
+          english: "Sorry, I can't",
+          portuguese: "Desculpe, não posso",
+          phonetic: "/ˈsɒri aɪ kænt/",
+          example: "Sorry, I can't today.",
+        },
+        {
+          english: "Maybe next time",
+          portuguese: "Talvez na próxima",
+          phonetic: "/ˈmeɪbi nɛkst taɪm/",
+          example: "Maybe next time!",
+        },
+      ],
+      grammarTip: {
+        title: "Convites com \"Would you like\"",
+        explanation:
+          "Para convidar de forma educada, use \"Would you like to…?\": \"Would you like to have dinner?\". Para aceitar, responda \"I'd love to\" ou \"That sounds great\". Para recusar, diga \"I'm sorry, I can't\".",
+      },
+      miniExercise: {
+        question: "Qual é a resposta correta para aceitar um convite?",
+        options: [
+          "No, thanks.",
+          "I'd love to!",
+          "I can't.",
+          "Sorry.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "\"I'd love to!\" é uma forma positiva de aceitar um convite. As outras opções indicam recusa.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 10 — At the Doctor (A2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "at-the-doctor",
+    title: "No Médico",
+    description:
+      "Aprenda a descrever sintomas e pedir ajuda médica em inglês.",
+    level: "A2",
+    icon: "🩺",
+    content: {
+      introduction:
+        "Em viagens, é importante saber explicar como você se sente. Nesta lição, você vai aprender frases comuns para falar de sintomas e entender orientações do médico.",
+      dialogue: [
+        {
+          speaker: "Doctor",
+          english: "How are you feeling today?",
+          portuguese: "Como você está se sentindo hoje?",
+        },
+        {
+          speaker: "Patient",
+          english: "I have a headache and a sore throat.",
+          portuguese: "Estou com dor de cabeça e dor de garganta.",
+        },
+        {
+          speaker: "Doctor",
+          english: "You should rest and drink water.",
+          portuguese: "Você deve descansar e beber água.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Headache",
+          portuguese: "Dor de cabeça",
+          phonetic: "/ˈhɛdˌeɪk/",
+          example: "I have a headache.",
+        },
+        {
+          english: "Sore throat",
+          portuguese: "Dor de garganta",
+          phonetic: "/sɔːr θroʊt/",
+          example: "My throat is sore.",
+        },
+        {
+          english: "Fever",
+          portuguese: "Febre",
+          phonetic: "/ˈfiːvər/",
+          example: "I have a fever.",
+        },
+        {
+          english: "Medicine",
+          portuguese: "Remédio",
+          phonetic: "/ˈmɛdɪsɪn/",
+          example: "Take this medicine.",
+        },
+        {
+          english: "Rest",
+          portuguese: "Descansar",
+          phonetic: "/rɛst/",
+          example: "You should rest.",
+        },
+      ],
+      grammarTip: {
+        title: "Usando \"have\" para sintomas",
+        explanation:
+          "Para falar de sintomas, usamos \"have\": \"I have a headache\" (Eu tenho dor de cabeça), \"I have a fever\" (Eu tenho febre). Para dar conselho, use \"should\": \"You should rest\" (Você deve descansar).",
+      },
+      miniExercise: {
+        question: "Como dizer \"Estou com febre\" em inglês?",
+        options: [
+          "I am fever.",
+          "I have a fever.",
+          "I fever.",
+          "I have fevered.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "A forma correta é \"I have a fever\". Em inglês usamos o verbo \"have\" para falar de sintomas.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 11 — Giving Opinions (B1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "giving-opinions",
+    title: "Dando Opiniões",
+    description:
+      "Aprenda a expressar opiniões, concordar e discordar em inglês.",
+    level: "B1",
+    icon: "💬",
+    content: {
+      introduction:
+        "Expressar sua opinião é essencial em conversas mais avançadas. Nesta lição, você vai aprender frases para dar sua opinião, concordar e discordar de forma educada.",
+      dialogue: [
+        {
+          speaker: "Nina",
+          english: "What do you think about this movie?",
+          portuguese: "O que você acha deste filme?",
+        },
+        {
+          speaker: "Rafael",
+          english: "In my opinion, it's very inspiring.",
+          portuguese: "Na minha opinião, é muito inspirador.",
+        },
+        {
+          speaker: "Nina",
+          english: "I agree. The story is great.",
+          portuguese: "Eu concordo. A história é ótima.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "In my opinion",
+          portuguese: "Na minha opinião",
+          phonetic: "/ɪn maɪ əˈpɪnjən/",
+          example: "In my opinion, this is a good idea.",
+        },
+        {
+          english: "I agree",
+          portuguese: "Eu concordo",
+          phonetic: "/aɪ əˈɡriː/",
+          example: "I agree with you.",
+        },
+        {
+          english: "I disagree",
+          portuguese: "Eu discordo",
+          phonetic: "/aɪ ˌdɪsəˈɡriː/",
+          example: "I disagree on that point.",
+        },
+        {
+          english: "I think",
+          portuguese: "Eu acho",
+          phonetic: "/aɪ θɪŋk/",
+          example: "I think it's important.",
+        },
+        {
+          english: "From my point of view",
+          portuguese: "Do meu ponto de vista",
+          phonetic: "/frʌm maɪ pɔɪnt əv vjuː/",
+          example: "From my point of view, it's necessary.",
+        },
+      ],
+      grammarTip: {
+        title: "Estruturas para opinião",
+        explanation:
+          "Para dar opinião, use expressões como \"I think\", \"In my opinion\" ou \"From my point of view\". Para concordar, use \"I agree\". Para discordar, use \"I disagree\" ou \"I'm not sure I agree\".",
+      },
+      miniExercise: {
+        question: "Qual frase expressa opinião?",
+        options: [
+          "In my opinion, it's too expensive.",
+          "Turn left at the corner.",
+          "My name is Ana.",
+          "The store is closed.",
+        ],
+        correctIndex: 0,
+        explanation:
+          "\"In my opinion, it's too expensive\" é a única frase que expressa opinião. As outras são fatos ou instruções.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 12 — News & Media (B1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "news-and-media",
+    title: "Notícias e Mídia",
+    description:
+      "Aprenda vocabulário para falar de notícias, mídia e informação em inglês.",
+    level: "B1",
+    icon: "📰",
+    content: {
+      introduction:
+        "Ler notícias em inglês é uma ótima forma de praticar. Nesta lição, você vai aprender palavras comuns de jornal e expressões para falar sobre informações.",
+      dialogue: [
+        {
+          speaker: "Carla",
+          english: "Did you see the news today?",
+          portuguese: "Você viu as notícias hoje?",
+        },
+        {
+          speaker: "Diego",
+          english: "Yes, I read it online this morning.",
+          portuguese: "Sim, eu li online esta manhã.",
+        },
+        {
+          speaker: "Carla",
+          english: "The headline was surprising.",
+          portuguese: "A manchete foi surpreendente.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Headline",
+          portuguese: "Manchete",
+          phonetic: "/ˈhɛdlaɪn/",
+          example: "The headline caught my attention.",
+        },
+        {
+          english: "Report",
+          portuguese: "Reportagem",
+          phonetic: "/rɪˈpɔːrt/",
+          example: "The report explains the issue.",
+        },
+        {
+          english: "Journalist",
+          portuguese: "Jornalista",
+          phonetic: "/ˈdʒɜːrnəlɪst/",
+          example: "The journalist asked questions.",
+        },
+        {
+          english: "Source",
+          portuguese: "Fonte",
+          phonetic: "/sɔːrs/",
+          example: "Check the source of the information.",
+        },
+        {
+          english: "Breaking news",
+          portuguese: "Notícia de última hora",
+          phonetic: "/ˈbreɪkɪŋ nuːz/",
+          example: "Breaking news is on TV now.",
+        },
+      ],
+      grammarTip: {
+        title: "Present perfect para notícias recentes",
+        explanation:
+          "Ao falar de notícias recentes, usamos o present perfect: \"The government has announced a new plan.\" (O governo anunciou...). Isso destaca a relevância no presente.",
+      },
+      miniExercise: {
+        question: "Qual frase está no present perfect?",
+        options: [
+          "The reporter writes every day.",
+          "The reporter has written a new article.",
+          "The reporter wrote yesterday.",
+          "The reporter is writing now.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "\"Has written\" é present perfect, usado para ações recentes com impacto no presente.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 13 — Workplace Communication (B1)
+  // ──────────────────────────────────────────────
+  {
+    slug: "workplace-communication",
+    title: "Comunicação no Trabalho",
+    description:
+      "Aprenda frases úteis para reuniões, e-mails e conversas no trabalho.",
+    level: "B1",
+    icon: "🏢",
+    content: {
+      introduction:
+        "No ambiente de trabalho, uma comunicação clara é essencial. Nesta lição, você vai aprender expressões para reuniões, prazos e colaboração.",
+      dialogue: [
+        {
+          speaker: "Manager",
+          english: "Can we schedule a meeting for tomorrow?",
+          portuguese: "Podemos agendar uma reunião para amanhã?",
+        },
+        {
+          speaker: "Employee",
+          english: "Sure. What time works best for you?",
+          portuguese: "Claro. Que horário é melhor para você?",
+        },
+        {
+          speaker: "Manager",
+          english: "Let's meet at 2 p.m. to discuss the project.",
+          portuguese: "Vamos nos reunir às 14h para discutir o projeto.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Meeting",
+          portuguese: "Reunião",
+          phonetic: "/ˈmiːtɪŋ/",
+          example: "We have a meeting at 3 p.m.",
+        },
+        {
+          english: "Deadline",
+          portuguese: "Prazo",
+          phonetic: "/ˈdɛdlaɪn/",
+          example: "The deadline is next Friday.",
+        },
+        {
+          english: "Project",
+          portuguese: "Projeto",
+          phonetic: "/ˈprɒdʒɛkt/",
+          example: "The project is almost ready.",
+        },
+        {
+          english: "Discuss",
+          portuguese: "Discutir",
+          phonetic: "/dɪˈskʌs/",
+          example: "Let's discuss the plan.",
+        },
+        {
+          english: "Update",
+          portuguese: "Atualização",
+          phonetic: "/ˈʌpdeɪt/",
+          example: "Send me an update.",
+        },
+      ],
+      grammarTip: {
+        title: "Pedidos e sugestões no trabalho",
+        explanation:
+          "Para fazer pedidos educados, use \"Can we…?\" ou \"Could you…?\": \"Could you send me the report?\". Para sugerir, use \"Let's\": \"Let's meet at 2 p.m.\".",
+      },
+      miniExercise: {
+        question: "Qual frase é um pedido educado?",
+        options: [
+          "Send me the file now.",
+          "Could you send me the file, please?",
+          "Send the file.",
+          "You send me the file.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "\"Could you send me the file, please?\" é a forma mais educada de pedir algo no trabalho.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 14 — Presentations (B2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "presentations-b2",
+    title: "Apresentações Profissionais",
+    description:
+      "Aprenda a estruturar apresentações em inglês com abertura, tópicos e conclusão.",
+    level: "B2",
+    icon: "🎤",
+    content: {
+      introduction:
+        "Fazer apresentações em inglês exige vocabulário mais formal e estruturas claras. Nesta lição, você vai aprender frases para abrir, transitar entre tópicos e encerrar sua apresentação.",
+      dialogue: [
+        {
+          speaker: "Presenter",
+          english: "Good morning, everyone. Thank you for being here today.",
+          portuguese: "Bom dia a todos. Obrigado por estarem aqui hoje.",
+        },
+        {
+          speaker: "Presenter",
+          english: "I'll start with the overview, then move to the results.",
+          portuguese: "Vou começar com a visão geral e depois passar para os resultados.",
+        },
+        {
+          speaker: "Presenter",
+          english: "To conclude, I'd like to summarize the key points.",
+          portuguese: "Para concluir, gostaria de resumir os pontos principais.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Overview",
+          portuguese: "Visão geral",
+          phonetic: "/ˈoʊvərvjuː/",
+          example: "Here's a quick overview.",
+        },
+        {
+          english: "Key points",
+          portuguese: "Pontos principais",
+          phonetic: "/kiː pɔɪnts/",
+          example: "Let's review the key points.",
+        },
+        {
+          english: "To conclude",
+          portuguese: "Para concluir",
+          phonetic: "/tə kənˈkluːd/",
+          example: "To conclude, thank you all.",
+        },
+        {
+          english: "As you can see",
+          portuguese: "Como podem ver",
+          phonetic: "/æz juː kæn siː/",
+          example: "As you can see on this slide.",
+        },
+        {
+          english: "Let's move on",
+          portuguese: "Vamos seguir para",
+          phonetic: "/lɛts muːv ɒn/",
+          example: "Let's move on to the next topic.",
+        },
+      ],
+      grammarTip: {
+        title: "Linguagem formal em apresentações",
+        explanation:
+          "Em apresentações, prefira linguagem formal e conectores: \"Firstly\", \"Additionally\", \"As a result\" e \"To conclude\". Isso ajuda a organizar as ideias e manter o público engajado.",
+      },
+      miniExercise: {
+        question: "Qual frase é adequada para concluir uma apresentação?",
+        options: [
+          "To conclude, thank you for your attention.",
+          "What's up, guys?",
+          "I don't know.",
+          "See ya later.",
+        ],
+        correctIndex: 0,
+        explanation:
+          "\"To conclude, thank you for your attention\" é formal e apropriado para encerrar uma apresentação.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 15 — Negotiations (B2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "negotiations-b2",
+    title: "Negociações",
+    description:
+      "Aprenda expressões para negociar prazos, preços e condições em inglês.",
+    level: "B2",
+    icon: "🤝",
+    content: {
+      introduction:
+        "Negociar em inglês requer clareza e diplomacia. Nesta lição, você vai aprender frases para propor condições e chegar a acordos.",
+      dialogue: [
+        {
+          speaker: "Client",
+          english: "Could we discuss a lower price for this service?",
+          portuguese: "Podemos discutir um preço mais baixo para este serviço?",
+        },
+        {
+          speaker: "Sales",
+          english: "We can offer a 10% discount if you sign a yearly contract.",
+          portuguese: "Podemos oferecer 10% de desconto se você assinar um contrato anual.",
+        },
+        {
+          speaker: "Client",
+          english: "That sounds reasonable. Let's proceed.",
+          portuguese: "Isso parece razoável. Vamos seguir.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Discount",
+          portuguese: "Desconto",
+          phonetic: "/ˈdɪskaʊnt/",
+          example: "We can offer a discount.",
+        },
+        {
+          english: "Terms",
+          portuguese: "Condições",
+          phonetic: "/tɜːrmz/",
+          example: "Let's review the terms.",
+        },
+        {
+          english: "Agreement",
+          portuguese: "Acordo",
+          phonetic: "/əˈɡriːmənt/",
+          example: "We reached an agreement.",
+        },
+        {
+          english: "Proposal",
+          portuguese: "Proposta",
+          phonetic: "/prəˈpoʊzəl/",
+          example: "Here's our proposal.",
+        },
+        {
+          english: "Reasonable",
+          portuguese: "Razoável",
+          phonetic: "/ˈriːzənəbl/",
+          example: "That's a reasonable request.",
+        },
+      ],
+      grammarTip: {
+        title: "Condicionais para negociação",
+        explanation:
+          "Para negociar, use condicionais com \"if\": \"We can reduce the price if you pay upfront.\" (Podemos reduzir o preço se você pagar adiantado). Isso soa profissional e flexível.",
+      },
+      miniExercise: {
+        question: "Qual frase usa condicional para negociar?",
+        options: [
+          "We reduce the price now.",
+          "We can reduce the price if you pay today.",
+          "Reduce price.",
+          "You pay today, price reduce.",
+        ],
+        correctIndex: 1,
+        explanation:
+          "\"We can reduce the price if you pay today\" usa uma condicional clara para negociação.",
+      },
+    },
+  },
+  // ──────────────────────────────────────────────
+  // LESSON 16 — Academic Writing (B2)
+  // ──────────────────────────────────────────────
+  {
+    slug: "academic-writing",
+    title: "Escrita Acadêmica",
+    description:
+      "Aprenda conectores e estruturas formais para redações e textos acadêmicos em inglês.",
+    level: "B2",
+    icon: "📝",
+    content: {
+      introduction:
+        "Textos acadêmicos exigem linguagem formal e conectores claros. Nesta lição, você vai aprender expressões para organizar ideias e argumentos.",
+      dialogue: [
+        {
+          speaker: "Professor",
+          english: "In your essay, use clear transitions between paragraphs.",
+          portuguese: "Na sua redação, use transições claras entre parágrafos.",
+        },
+        {
+          speaker: "Student",
+          english: "Should I use phrases like 'Moreover' and 'Therefore'?",
+          portuguese: "Devo usar frases como 'Moreover' e 'Therefore'?",
+        },
+        {
+          speaker: "Professor",
+          english: "Exactly. They make your argument stronger.",
+          portuguese: "Exatamente. Elas tornam seu argumento mais forte.",
+        },
+      ],
+      vocabulary: [
+        {
+          english: "Moreover",
+          portuguese: "Além disso",
+          phonetic: "/mɔːrˈoʊvər/",
+          example: "Moreover, the results support the hypothesis.",
+        },
+        {
+          english: "Therefore",
+          portuguese: "Portanto",
+          phonetic: "/ˈðerfɔːr/",
+          example: "Therefore, we conclude that...",
+        },
+        {
+          english: "However",
+          portuguese: "No entanto",
+          phonetic: "/haʊˈevər/",
+          example: "However, there are limitations.",
+        },
+        {
+          english: "Argument",
+          portuguese: "Argumento",
+          phonetic: "/ˈɑːrɡjəmənt/",
+          example: "Your argument is clear.",
+        },
+        {
+          english: "Evidence",
+          portuguese: "Evidência",
+          phonetic: "/ˈevɪdəns/",
+          example: "The evidence supports the claim.",
+        },
+      ],
+      grammarTip: {
+        title: "Conectores formais",
+        explanation:
+          "Em textos acadêmicos, use conectores formais: \"Moreover\" (além disso), \"However\" (no entanto), \"Therefore\" (portanto). Eles ajudam a organizar a argumentação.",
+      },
+      miniExercise: {
+        question: "Qual conector indica conclusão?",
+        options: ["Moreover", "However", "Therefore", "Because"],
+        correctIndex: 2,
+        explanation:
+          "\"Therefore\" indica conclusão. \"Moreover\" adiciona informação e \"However\" indica contraste.",
+      },
+    },
+  },
 ];
