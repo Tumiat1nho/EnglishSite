@@ -711,7 +711,7 @@ São usados como complemento do verbo ou após preposições.
           correct: "I didn't go to school.",
           explanation:
 codex/review-project-lhk4ky
-            'Após "didn\'t", o verbo volta à forma base (go), sem passado.',
+            "Após didn't, o verbo volta à forma base (go), sem passado.",
 main
         },
         {
