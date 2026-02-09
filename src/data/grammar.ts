@@ -710,7 +710,7 @@ São usados como complemento do verbo ou após preposições.
           wrong: "I didn't went to school.",
           correct: "I didn't go to school.",
           explanation:
-codex/review-project-lhk4ky
+codex/review-project-lhk4ky,
             "Após didn't, o verbo volta à forma base (go), sem passado.",
 main
         },
@@ -1071,10 +1071,8 @@ Também é possível inverter:
           wrong: "If he doesn't comes, we'll start.",
           correct: "If he doesn't come, we'll start.",
           explanation:
-codex/review-project-lhk4ky
-            "Após \"doesn't\", o verbo fica na forma base.",
-
-            'Após "doesn't", o verbo fica na forma base.',
+codex/review-project-lhk4ky,
+            "Após doesn't, o verbo fica na forma base.",
  main
         },
       ],
