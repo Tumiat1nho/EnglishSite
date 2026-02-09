@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import LessonCard from "@/components/LessonCard";
+import Link from "next/link";
+import LevelBadge from "@/components/LevelBadge";
 import { lessons } from "@/data/lessons";
 
 const levelOrder = ["A1", "A2", "B1", "B2"];
@@ -19,13 +20,13 @@ const levelGradients: Record<string, string> = {
   B2: "from-primary-light to-primary",
 };
 
-export default function LicoesPage() {
+function LicoesContent() {
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("nivel") || "all";
   const [selectedLevel, setSelectedLevel] = useState(initialLevel);
   const [search, setSearch] = useState("");
 
-  const filteredLessons = useMemo(() => {
+  const filtered = useMemo(() => {
     let result = lessons;
     if (selectedLevel !== "all") {
       result = result.filter((l) => l.level === selectedLevel);
@@ -46,20 +47,17 @@ export default function LicoesPage() {
           📚 Lições de Inglês
         </h1>
         <p className="text-gray-500 max-w-2xl">
-          Aprenda inglês com lições práticas organizadas por nível. Cada lição inclui
-          diálogos, vocabulário e exercícios de fixação.
+          Aprenda inglês com lições interativas organizadas por nível. Cada lição
+          inclui diálogos, vocabulário, dicas de gramática e exercícios práticos.
         </p>
       </div>
 
-      {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedLevel("all")}
             className={`category-pill px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-              selectedLevel === "all"
-                ? "bg-gray-800 text-white shadow-md"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              selectedLevel === "all" ? "bg-gray-800 text-white shadow-md" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
             Todos ({lessons.length})
@@ -71,9 +69,7 @@ export default function LicoesPage() {
                 key={level}
                 onClick={() => setSelectedLevel(level)}
                 className={`category-pill px-4 py-2 rounded-full text-sm font-semibold transition-all ${
-                  selectedLevel === level
-                    ? `bg-gradient-to-r ${levelGradients[level]} text-white shadow-md`
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  selectedLevel === level ? `bg-gradient-to-r ${levelGradients[level]} text-white shadow-md` : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                 }`}
               >
                 {level} ({count})
@@ -82,69 +78,69 @@ export default function LicoesPage() {
           })}
         </div>
         <div className="relative sm:ml-auto">
-          <input
-            type="text"
-            placeholder="Buscar lição..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="pl-10 pr-4 py-2 border border-gray-200 rounded-xl text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/40"
-          />
+          <input type="text" placeholder="Buscar lição..." value={search} onChange={(e) => setSearch(e.target.value)}
+            className="pl-10 pr-4 py-2 border border-gray-200 rounded-xl text-sm w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/40" />
           <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </div>
       </div>
 
-      {/* Results */}
       {selectedLevel === "all" ? (
         levelOrder.map((level) => {
-          const levelLessons = filteredLessons.filter((l) => l.level === level);
+          const levelLessons = filtered.filter((l) => l.level === level);
           if (levelLessons.length === 0) return null;
           return (
             <section key={level} className="mb-12">
               <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <span className={`bg-gradient-to-r ${levelGradients[level]} text-white px-3 py-1 rounded-lg text-sm`}>
-                  {level}
-                </span>
+                <span className={`bg-gradient-to-r ${levelGradients[level]} text-white px-3 py-1 rounded-lg text-sm`}>{level}</span>
                 {levelNames[level]}
                 <span className="text-sm font-normal text-gray-400">({levelLessons.length})</span>
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {levelLessons.map((lesson) => (
-                  <LessonCard
-                    key={lesson.slug}
-                    title={lesson.title}
-                    description={lesson.description}
-                    level={lesson.level}
-                    href={`/licoes/${lesson.slug}`}
-                    icon={lesson.icon}
-                  />
+                  <Link key={lesson.slug} href={`/licoes/${lesson.slug}`} className="group">
+                    <div className={`bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100 group-hover:border-primary/20 group-hover:-translate-y-1 level-${level.toLowerCase()}`}>
+                      <div className="text-3xl mb-3">{lesson.icon}</div>
+                      <LevelBadge level={lesson.level} />
+                      <h3 className="text-lg font-semibold mt-3 mb-2 text-gray-900 group-hover:text-primary transition-colors">{lesson.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed">{lesson.description}</p>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </section>
           );
         })
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredLessons.map((lesson) => (
-            <LessonCard
-              key={lesson.slug}
-              title={lesson.title}
-              description={lesson.description}
-              level={lesson.level}
-              href={`/licoes/${lesson.slug}`}
-              icon={lesson.icon}
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {filtered.map((lesson) => (
+            <Link key={lesson.slug} href={`/licoes/${lesson.slug}`} className="group">
+              <div className={`bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-gray-100 group-hover:border-primary/20 group-hover:-translate-y-1 level-${lesson.level.toLowerCase()}`}>
+                <div className="text-3xl mb-3">{lesson.icon}</div>
+                <LevelBadge level={lesson.level} />
+                <h3 className="text-lg font-semibold mt-3 mb-2 text-gray-900 group-hover:text-primary transition-colors">{lesson.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{lesson.description}</p>
+              </div>
+            </Link>
           ))}
         </div>
       )}
 
-      {filteredLessons.length === 0 && (
+      {filtered.length === 0 && (
         <div className="text-center py-12 text-gray-400">
           <p className="text-lg">Nenhuma lição encontrada.</p>
           <p className="text-sm mt-1">Tente mudar o filtro ou a busca.</p>
         </div>
       )}
     </div>
+  );
+}
+
+export default function LicoesPage() {
+  return (
+    <Suspense fallback={<div className="max-w-6xl mx-auto px-4 py-12 text-center text-gray-400">Carregando...</div>}>
+      <LicoesContent />
+    </Suspense>
   );
 }

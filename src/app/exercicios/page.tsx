@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import LevelBadge from "@/components/LevelBadge";
@@ -34,7 +34,7 @@ const typeIcons: Record<string, string> = {
   mixed: "🔀",
 };
 
-export default function ExerciciosPage() {
+function ExerciciosContent() {
   const searchParams = useSearchParams();
   const initialLevel = searchParams.get("nivel") || "all";
   const [selectedLevel, setSelectedLevel] = useState(initialLevel);
@@ -201,5 +201,13 @@ export default function ExerciciosPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ExerciciosPage() {
+  return (
+    <Suspense fallback={<div className="max-w-6xl mx-auto px-4 py-12 text-center text-gray-400">Carregando...</div>}>
+      <ExerciciosContent />
+    </Suspense>
   );
 }
