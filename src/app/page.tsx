@@ -45,11 +45,11 @@ export default function Home() {
       <section className="bg-gradient-to-br from-primary to-primary-light text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 font-[family-name:var(--font-heading)]">
-            Aprenda Inglês de Forma Gratuita
+            Um empurrãozinho a mais da Teacher Rafa!
           </h1>
           <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Lições, gramática, vocabulário e exercícios interativos — tudo em
-            português, para brasileiros que querem dominar o inglês.
+            um lugar só!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
