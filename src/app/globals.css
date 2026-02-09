@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1e3a5f;
-  --color-primary-light: #2d5a8e;
-  --color-primary-dark: #152a45;
-  --color-accent: #f59e0b;
-  --color-accent-light: #fbbf24;
-  --color-success: #10b981;
-  --color-success-light: #34d399;
+  --color-primary: #7b5cd6;
+  --color-primary-light: #a67eee;
+  --color-primary-dark: #5a3fb5;
+  --color-secondary: #977eee;
+  --color-secondary-light: #b8a4f5;
+  --color-accent: #7ebcee;
+  --color-accent-light: #a0d0f5;
+  --color-accent-dark: #5a9ad6;
+  --color-teal: #7eeee4;
+  --color-teal-light: #a5f5ee;
+  --color-teal-dark: #5cd6cc;
+  --color-success: #7eeee4;
+  --color-success-light: #a5f5ee;
   --color-error: #ef4444;
   --color-error-light: #f87171;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -20,6 +26,52 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+/* Custom gradient backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, #7b5cd6 0%, #a67eee 30%, #977eee 50%, #7ebcee 75%, #7eeee4 100%);
+}
+
+.gradient-card-purple {
+  background: linear-gradient(135deg, #a67eee, #977eee);
+}
+
+.gradient-card-blue {
+  background: linear-gradient(135deg, #977eee, #7ebcee);
+}
+
+.gradient-card-teal {
+  background: linear-gradient(135deg, #7ebcee, #7eeee4);
+}
+
+.gradient-card-mixed {
+  background: linear-gradient(135deg, #a67eee, #7eeee4);
+}
+
+/* Level-specific gradient borders */
+.level-a1 { border-left: 4px solid #7eeee4; }
+.level-a2 { border-left: 4px solid #7ebcee; }
+.level-b1 { border-left: 4px solid #977eee; }
+.level-b2 { border-left: 4px solid #a67eee; }
+
+/* Dropdown styles */
+.dropdown-menu {
+  animation: dropdownFade 0.2s ease-out;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Category pill hover */
+.category-pill {
+  transition: all 0.2s ease;
+}
+.category-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 92, 214, 0.15);
 }
 
 /* Flashcard flip animation */
