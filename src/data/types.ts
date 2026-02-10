@@ -1,26 +1,62 @@
+export interface LessonDialogueLine {
+  speaker: string;
+  english: string;
+  portuguese: string;
+}
+
+export interface LessonVocabularyItem {
+  english: string;
+  portuguese: string;
+  phonetic: string;
+  example: string;
+}
+
+export interface LessonGrammarTip {
+  title: string;
+  explanation: string;
+}
+
+export interface LessonMiniExercise {
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+}
+
+export interface LessonContent {
+  introduction: string;
+  dialogue: LessonDialogueLine[];
+  vocabulary: LessonVocabularyItem[];
+  grammarTip: LessonGrammarTip;
+  miniExercise: LessonMiniExercise;
+}
+
 export interface Lesson {
   slug: string;
   title: string;
   description: string;
   level: string;
   icon: string;
-  content: {
-    introduction: string;
-    dialogue: { speaker: string; english: string; portuguese: string }[];
-    vocabulary: {
-      english: string;
-      portuguese: string;
-      phonetic: string;
-      example: string;
-    }[];
-    grammarTip: { title: string; explanation: string };
-    miniExercise: {
-      question: string;
-      options: string[];
-      correctIndex: number;
-      explanation: string;
-    };
-  };
+  content: LessonContent;
+}
+
+export interface GrammarExample {
+  english: string;
+  portuguese: string;
+  highlight: string;
+}
+
+export interface GrammarCommonMistake {
+  wrong: string;
+  correct: string;
+  explanation: string;
+}
+
+export interface GrammarContent {
+  explanation: string;
+  examples: GrammarExample[];
+  commonMistakes: GrammarCommonMistake[];
+  tip: string;
 }
 
 export interface GrammarTopic {
@@ -29,12 +65,7 @@ export interface GrammarTopic {
   description: string;
   level: string;
   icon: string;
-  content: {
-    explanation: string;
-    examples: { english: string; portuguese: string; highlight: string }[];
-    commonMistakes: { wrong: string; correct: string; explanation: string }[];
-    tip: string;
-  };
+  content: GrammarContent;
 }
 
 export interface VocabularyWord {
