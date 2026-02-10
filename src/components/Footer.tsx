@@ -35,6 +35,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/verbos" className="hover:text-teal transition-colors">
+                  Verbos
+                </Link>
+              </li>
+              <li>
                 <Link href="/exercicios" className="hover:text-teal transition-colors">
                   Exercícios
                 </Link>
