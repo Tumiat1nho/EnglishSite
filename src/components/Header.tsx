@@ -84,7 +84,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold font-[family-name:var(--font-heading)] tracking-tight flex items-center gap-2">
           <span className="bg-white/20 rounded-lg p-1.5 text-lg">🎓</span>
-          English Academy
+          Teacher Rafa
         </Link>
 
         {/* Desktop nav */}
