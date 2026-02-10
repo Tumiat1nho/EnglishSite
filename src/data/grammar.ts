@@ -711,7 +711,6 @@ São usados como complemento do verbo ou após preposições.
           correct: "I didn't go to school.",
           explanation:
             "Após didn't, o verbo volta à forma base (go), sem passado.",
-
         },
         {
           wrong: "Did she went there?",
