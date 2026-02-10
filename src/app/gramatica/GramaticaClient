@@ -1,0 +1,158 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import LevelBadge from "@/components/LevelBadge";
+import { grammarTopics } from "@/data/grammar";
+
+const levelOrder = ["A1", "A2", "B1", "B2"];
+const levelNames: Record<string, string> = {
+  A1: "Iniciante",
+  A2: "Básico",
+  B1: "Intermediário",
+  B2: "Intermediário Superior",
+};
+const levelGradients: Record<string, string> = {
+  A1: "from-teal to-teal-light",
+  A2: "from-accent to-accent-light",
+  B1: "from-secondary to-secondary-light",
+  B2: "from-primary-light to-primary",
+};
+
+export default function GramaticaClient() {
+  const searchParams = useSearchParams();
+  const initialLevel = searchParams.get("nivel") || "all";
+  const [selectedLevel, setSelectedLevel] = useState(initialLevel);
+  const [search, setSearch] = useState("");
+
+  const filtered = useMemo(() => {
+    let result = grammarTopics;
+
+    if (selectedLevel !== "all") {
+      result = result.filter((t) => t.level === selectedLevel);
+    }
+
+    if (search.trim()) {
+      const q = search.toLowerCase();
+      result = result.filter(
+        (t) =>
+          t.title.toLowerCase().includes(q) ||
+          t.description.toLowerCase().includes(q)
+      );
+    }
+
+    return result;
+  }, [selectedLevel, search]);
+
+  const levels = ["all", ...levelOrder];
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      {/* Header */}
+      <div className="mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          Gramática
+        </h1>
+        <p className="text-white/70 text-lg max-w-3xl">
+          Explore tópicos por nível, filtre por categoria e estude no seu ritmo.
+        </p>
+      </div>
+
+      {/* Filters */}
+      <div className="bg-surface/40 border border-white/10 rounded-2xl p-5 md:p-6 mb-8">
+        <div className="flex flex-col lg:flex-row gap-4 lg:items-center lg:justify-between">
+          {/* Search */}
+          <div className="flex-1">
+            <label className="block text-sm text-white/70 mb-2">Buscar</label>
+            <input
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Ex: present perfect, articles, modals..."
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-white/25 focus:bg-white/10 transition"
+            />
+          </div>
+
+          {/* Level */}
+          <div className="lg:w-[360px]">
+            <label className="block text-sm text-white/70 mb-2">
+              Filtrar por nível
+            </label>
+            <div className="flex flex-wrap gap-2">
+              {levels.map((lvl) => {
+                const isActive = selectedLevel === lvl;
+                const label = lvl === "all" ? "Todos" : lvl;
+                const gradient =
+                  lvl === "all"
+                    ? "from-white/10 to-white/5"
+                    : levelGradients[lvl] || "from-white/10 to-white/5";
+
+                return (
+                  <button
+                    key={lvl}
+                    onClick={() => setSelectedLevel(lvl)}
+                    className={[
+                      "px-3 py-2 rounded-xl text-sm font-medium transition border",
+                      isActive
+                        ? `bg-gradient-to-r ${gradient} text-white border-white/20`
+                        : "bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white",
+                    ].join(" ")}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {selectedLevel !== "all" && (
+              <p className="text-xs text-white/50 mt-2">
+                {levelNames[selectedLevel] || ""}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Grid */}
+      {filtered.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {filtered.map((topic) => (
+            <Link
+              key={topic.slug}
+              href={`/gramatica/${topic.slug}`}
+              className="group bg-surface/40 border border-white/10 rounded-2xl p-6 hover:bg-surface/60 hover:border-white/20 transition"
+            >
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <h2 className="text-lg font-semibold text-white group-hover:text-white transition line-clamp-2">
+                  {topic.title}
+                </h2>
+                <LevelBadge level={topic.level} />
+              </div>
+              <p className="text-white/70 text-sm leading-relaxed line-clamp-3">
+                {topic.description}
+              </p>
+
+              <div className="mt-5 flex items-center justify-between">
+                <span className="text-xs text-white/50">
+                  Clique para abrir
+                </span>
+                <span className="text-white/60 group-hover:text-white transition">
+                  →
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className="bg-surface/40 border border-white/10 rounded-2xl p-10 text-center">
+          <p className="text-white/80 text-lg font-semibold mb-2">
+            Nada encontrado
+          </p>
+          <p className="text-white/60">
+            Tente mudar o nível selecionado ou ajustar a busca.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
