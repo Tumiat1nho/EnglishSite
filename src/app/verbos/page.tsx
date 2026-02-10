@@ -34,7 +34,7 @@ export default function VerbosPage() {
             Verbos mais usados em inglês
           </h1>
           <p className="text-gray-600 max-w-2xl">
-            Veja 100 verbos frequentes com suas formas no Simple Present, Simple Past e Simple Future,
+            Veja 100 verbos frequentes com suas formas no Simple Present, Simple Past e Future,
             além da regra usada para formar o passado.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function VerbosPage() {
           <div>
             <h3 className="text-xl font-semibold text-gray-900">Flashcards</h3>
             <p className="text-sm text-gray-500">
-              Clique em um card para ver Simple Present, Simple Past e Simple Future.
+              Clique em um card para ver Simple Present (infinitivo + he/she/it), Simple Past e Future.
             </p>
           </div>
         </div>
@@ -78,10 +78,13 @@ export default function VerbosPage() {
                 ) : (
                   <div className="space-y-3">
                     <div className="text-sm font-semibold text-gray-700">Simple Present</div>
+                    <div className="text-sm text-gray-500">Infinitive</div>
+                    <div className="text-lg text-gray-900">{verb.base}</div>
+                    <div className="text-sm text-gray-500">He/She/It</div>
                     <div className="text-lg text-gray-900">{verb.thirdPerson}</div>
                     <div className="text-sm font-semibold text-gray-700">Simple Past</div>
                     <div className="text-lg text-gray-900">{verb.past}</div>
-                    <div className="text-sm font-semibold text-gray-700">Simple Future</div>
+                    <div className="text-sm font-semibold text-gray-700">Future</div>
                     <div className="text-lg text-gray-900">will {verb.base}</div>
                   </div>
                 )}
